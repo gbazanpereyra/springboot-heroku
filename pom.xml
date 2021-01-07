@@ -12,7 +12,6 @@
 	<groupId>com.bolsadeideas</groupId>
 	<artifactId>springboot-heroku</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 
 	<name>springboot-heroku</name>
 	<description>Despliegue en Heroku</description>
