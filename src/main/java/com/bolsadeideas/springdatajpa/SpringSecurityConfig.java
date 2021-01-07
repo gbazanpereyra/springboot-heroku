@@ -52,8 +52,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configurerGlobal(AuthenticationManagerBuilder builder) throws Exception {
 
-        builder.userDetailsService(userDetailsService)
-                .passwordEncoder(passwordEncoder);
+        /*builder.userDetailsService(userDetailsService)
+                .passwordEncoder(passwordEncoder);*/
 
 
         //CONFIGURACIÓN PARA AUTENTICACIÓN CON JDBC
@@ -66,7 +66,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
        */
 
         //CONFIGURACIÓN PARA AUTENTICACIÓN EN MEMORIA
-        /*
+
         PasswordEncoder encoder = this.passwordEncoder;
         //La expresión enconder::encode reemplaza a
         //password -> encoder.encode(password)
@@ -75,8 +75,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         builder.inMemoryAuthentication()
             .withUser(users.username("admin").password("12345").roles("ADMIN", "USER"))
             .withUser(users.username("gero").password("12345").roles("USER"));
-
-         */
     }
 
 }
